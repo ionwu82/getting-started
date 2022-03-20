@@ -17,5 +17,5 @@ jobs:
        -  name : Build and tag
           run: |
            cd app
-           docker build --tag ionwu82/getting-started:0.0.1 .
-           docker push ionwu82/getting-started:0.0.1
+           docker build --tag iownu82/getting-started:0.0.1 .
+           docker push iownu82/getting-started:0.0.1
