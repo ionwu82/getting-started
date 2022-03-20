@@ -1,21 +1,21 @@
-  name: Build and deploy
+name: Build and deploy
   
-  on: push
+on: push
 
 
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-      steps:
-        -  name: Checkout Code
-           uses: actions/checkout@v2
-        -  name: Login to Docker hub
-           uses: docker/login-action@v1
-           with:
-             username: ionwu82
-             password: FB@llard00
-        -  name : Build and tag
-           run: |
-            cd app
-            docker build --tag ionwu82/getting-started:0.0.1 .
-            docker push ionwu82/getting-started:0.0.1
+jobs:
+  build:
+     runs-on: ubuntu-latest
+     steps:
+       -  name: Checkout Code
+          uses: actions/checkout@v2
+       -  name: Login to Docker hub
+          uses: docker/login-action@v1
+          with:
+            username: ionwu82
+            password: FB@llard00
+       -  name : Build and tag
+          run: |
+           cd app
+           docker build --tag ionwu82/getting-started:0.0.1 .
+           docker push ionwu82/getting-started:0.0.1
